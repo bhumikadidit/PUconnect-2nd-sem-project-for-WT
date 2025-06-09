@@ -82,6 +82,9 @@ async function handleRegister(e) {
         fullName: formData.get('fullName'),
         username: formData.get('username'),
         email: formData.get('email'),
+        university: formData.get('university'),
+        major: formData.get('major'),
+        year: formData.get('year'),
         password: formData.get('password'),
         confirmPassword: formData.get('confirmPassword')
     };
@@ -152,10 +155,28 @@ function validateRegistrationData(data) {
     
     // Email validation
     if (!data.email.trim()) {
-        showError('email', 'Email is required');
+        showError('email', 'University email is required');
         isValid = false;
     } else if (!isValidEmail(data.email)) {
-        showError('email', 'Please enter a valid email address');
+        showError('email', 'Please enter a valid university email address');
+        isValid = false;
+    }
+    
+    // University validation
+    if (!data.university.trim()) {
+        showError('university', 'University is required');
+        isValid = false;
+    }
+    
+    // Major validation
+    if (!data.major.trim()) {
+        showError('major', 'Major/Field of study is required');
+        isValid = false;
+    }
+    
+    // Year validation
+    if (!data.year.trim()) {
+        showError('year', 'Academic year is required');
         isValid = false;
     }
     

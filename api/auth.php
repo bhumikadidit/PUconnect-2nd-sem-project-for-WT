@@ -96,11 +96,14 @@ function handleRegister($data) {
     $fullName = trim($data['fullName'] ?? '');
     $username = trim($data['username'] ?? '');
     $email = trim($data['email'] ?? '');
+    $university = trim($data['university'] ?? '');
+    $major = trim($data['major'] ?? '');
+    $year = trim($data['year'] ?? '');
     $password = $data['password'] ?? '';
     $confirmPassword = $data['confirmPassword'] ?? '';
     
     // Validation
-    if (empty($fullName) || empty($username) || empty($email) || empty($password)) {
+    if (empty($fullName) || empty($username) || empty($email) || empty($university) || empty($major) || empty($year) || empty($password)) {
         throw new Exception('All fields are required');
     }
     
@@ -138,6 +141,9 @@ function handleRegister($data) {
         'fullName' => $fullName,
         'username' => $username,
         'email' => $email,
+        'university' => $university,
+        'major' => $major,
+        'year' => $year,
         'password' => password_hash($password, PASSWORD_DEFAULT),
         'bio' => '',
         'createdAt' => date('Y-m-d H:i:s'),

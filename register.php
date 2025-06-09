@@ -15,7 +15,7 @@ if (isLoggedIn()) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialConnect - Register</title>
+    <title>UniConnect - Join Campus</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -23,8 +23,8 @@ if (isLoggedIn()) {
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
-                <h1><i class="fas fa-share-alt"></i> SocialConnect</h1>
-                <p>Join the community and start connecting</p>
+                <h1><i class="fas fa-graduation-cap"></i> UniConnect</h1>
+                <p>Join your campus community today</p>
             </div>
             
             <form id="registerForm" class="auth-form">
@@ -41,9 +41,36 @@ if (isLoggedIn()) {
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">University Email</label>
+                    <input type="email" id="email" name="email" placeholder="student@university.edu" required>
                     <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <input type="text" id="university" name="university" placeholder="e.g., Stanford University" required>
+                    <span class="error-message" id="universityError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="major">Major/Field of Study</label>
+                    <input type="text" id="major" name="major" placeholder="e.g., Computer Science" required>
+                    <span class="error-message" id="majorError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year">Academic Year</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select your year</option>
+                        <option value="Freshman">Freshman</option>
+                        <option value="Sophomore">Sophomore</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Senior">Senior</option>
+                        <option value="Graduate">Graduate Student</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                    <span class="error-message" id="yearError"></span>
                 </div>
                 
                 <div class="form-group">

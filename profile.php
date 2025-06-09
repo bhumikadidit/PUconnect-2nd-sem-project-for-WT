@@ -26,7 +26,7 @@ $isOwnProfile = $profileUser['username'] === $currentUser['username'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialConnect - <?php echo htmlspecialchars($profileUser['fullName']); ?></title>
+    <title>UniConnect - <?php echo htmlspecialchars($profileUser['fullName']); ?></title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -34,7 +34,7 @@ $isOwnProfile = $profileUser['username'] === $currentUser['username'];
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h2><a href="index.php"><i class="fas fa-share-alt"></i> SocialConnect</a></h2>
+                <h2><a href="index.php"><i class="fas fa-graduation-cap"></i> UniConnect</a></h2>
             </div>
             <div class="nav-menu">
                 <div class="nav-user">
@@ -62,6 +62,11 @@ $isOwnProfile = $profileUser['username'] === $currentUser['username'];
                         <div class="profile-details">
                             <h1><?php echo htmlspecialchars($profileUser['fullName']); ?></h1>
                             <p class="username">@<?php echo htmlspecialchars($profileUser['username']); ?></p>
+                            <div class="academic-info">
+                                <p class="university"><i class="fas fa-university"></i> <?php echo htmlspecialchars($profileUser['university'] ?? 'University not specified'); ?></p>
+                                <p class="major"><i class="fas fa-book"></i> <?php echo htmlspecialchars($profileUser['major'] ?? 'Major not specified'); ?></p>
+                                <p class="year"><i class="fas fa-calendar-alt"></i> <?php echo htmlspecialchars($profileUser['year'] ?? 'Year not specified'); ?></p>
+                            </div>
                             <p class="bio"><?php echo htmlspecialchars($profileUser['bio'] ?? 'No bio available'); ?></p>
                             <div class="profile-stats">
                                 <span><strong id="postsCount">0</strong> Posts</span>
