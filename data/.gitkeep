@@ -1,0 +1,3 @@
+# This file ensures the data directory is tracked by Git
+# The data directory is used to store JSON files for users and posts
+# Remove this file once the directory contains actual data files
