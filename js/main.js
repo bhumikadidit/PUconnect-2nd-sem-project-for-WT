@@ -114,6 +114,7 @@ function setupEventListeners() {
 // Post creation
 async function createPost() {
     const content = document.getElementById('postContent').value.trim();
+    const category = document.getElementById('postCategory').value;
     
     if (!content) {
         showMessage('Post content cannot be empty', 'error');
@@ -131,7 +132,7 @@ async function createPost() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ content })
+            body: JSON.stringify({ content, category })
         });
         
         const data = await response.json();
@@ -246,6 +247,19 @@ function createPostHTML(post) {
     const timeAgo = formatTimeAgo(post.createdAt);
     const isOwner = currentUser && post.username === currentUser.username;
     
+    // Category icons mapping
+    const categoryIcons = {
+        'general': 'fas fa-comment',
+        'academic': 'fas fa-book',
+        'events': 'fas fa-calendar',
+        'study-group': 'fas fa-users',
+        'housing': 'fas fa-home',
+        'clubs': 'fas fa-star'
+    };
+    
+    const categoryIcon = categoryIcons[post.category] || 'fas fa-comment';
+    const categoryLabel = post.category ? post.category.replace('-', ' ').toUpperCase() : 'GENERAL';
+    
     return `
         <div class="post-card" data-post-id="${post.id}">
             <div class="post-header">
@@ -253,8 +267,17 @@ function createPostHTML(post) {
                 <div class="post-user-info">
                     <div class="post-user-name">${escapeHtml(post.fullName)}</div>
                     <div class="post-username">@${escapeHtml(post.username)}</div>
+                    <div class="post-academic-info">
+                        ${post.year ? `<span class="academic-tag">${escapeHtml(post.year)}</span>` : ''}
+                        ${post.major ? `<span class="academic-tag">${escapeHtml(post.major)}</span>` : ''}
+                    </div>
                 </div>
-                <div class="post-time">${timeAgo}</div>
+                <div class="post-meta">
+                    <div class="post-category">
+                        <i class="${categoryIcon}"></i> ${categoryLabel}
+                    </div>
+                    <div class="post-time">${timeAgo}</div>
+                </div>
                 ${isOwner ? `<button class="delete-btn" data-post-id="${post.id}" title="Delete post"><i class="fas fa-trash"></i></button>` : ''}
             </div>
             <div class="post-content">${escapeHtml(post.content)}</div>

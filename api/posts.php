@@ -77,6 +77,7 @@ function handleDeleteRequest($action) {
 
 function createPost($data) {
     $content = trim($data['content'] ?? '');
+    $category = trim($data['category'] ?? 'general');
     
     if (empty($content)) {
         throw new Exception('Post content cannot be empty');
@@ -94,7 +95,11 @@ function createPost($data) {
         'userId' => $currentUser['id'],
         'username' => $currentUser['username'],
         'fullName' => $currentUser['fullName'],
+        'university' => $currentUser['university'] ?? '',
+        'major' => $currentUser['major'] ?? '',
+        'year' => $currentUser['year'] ?? '',
         'content' => $content,
+        'category' => $category,
         'createdAt' => date('Y-m-d H:i:s'),
         'likes' => [],
         'comments' => []
