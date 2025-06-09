@@ -49,12 +49,12 @@ input, textarea {
 }
 
 .nav-brand h2 {
-    color: #1da1f2;
+    color: #6f42c1;
     font-size: 1.5rem;
 }
 
 .nav-brand a {
-    color: #1da1f2;
+    color: #6f42c1;
 }
 
 .nav-menu {
@@ -226,12 +226,12 @@ input, textarea {
 }
 
 .btn-primary {
-    background: #1da1f2;
+    background: #6f42c1;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #1991db;
+    background: #5a32a3;
 }
 
 .btn-secondary {
@@ -244,13 +244,13 @@ input, textarea {
 }
 
 .btn-outline {
-    border: 2px solid #1da1f2;
+    border: 2px solid #6f42c1;
     background: transparent;
-    color: #1da1f2;
+    color: #6f42c1;
 }
 
 .btn-outline:hover {
-    background: #1da1f2;
+    background: #6f42c1;
     color: white;
 }
 
@@ -541,8 +541,19 @@ input, textarea {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
-    border-color: #1da1f2;
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #6f42c1;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    background: white;
 }
 
 .error-message {
@@ -559,7 +570,7 @@ input, textarea {
 }
 
 .auth-footer a {
-    color: #1da1f2;
+    color: #6f42c1;
     font-weight: 600;
 }
 
@@ -592,7 +603,7 @@ input, textarea {
 }
 
 .profile-cover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6f42c1 0%, #9c88ff 100%);
     height: 200px;
     position: relative;
 }
@@ -620,6 +631,26 @@ input, textarea {
 .username {
     color: #666;
     margin-bottom: 10px;
+}
+
+.academic-info {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(111, 66, 193, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #6f42c1;
+}
+
+.academic-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.academic-info i {
+    color: #6f42c1;
+    margin-right: 8px;
+    width: 16px;
 }
 
 .bio {
@@ -664,7 +695,7 @@ input, textarea {
 }
 
 .nav-tab.active {
-    color: #1da1f2;
+    color: #6f42c1;
     background: #f8f9fa;
 }
 

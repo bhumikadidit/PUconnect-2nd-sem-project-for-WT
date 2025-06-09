@@ -55,9 +55,19 @@ $currentUser = getCurrentUser();
                     <img src="https://via.placeholder.com/50" alt="Your avatar" class="post-avatar">
                     <textarea id="postContent" placeholder="Share your campus thoughts, <?php echo htmlspecialchars($currentUser['username']); ?>? Study updates, events, or just chat!" class="post-input"></textarea>
                 </div>
+                <div class="post-options">
+                    <select id="postCategory" class="post-category-select">
+                        <option value="general">General</option>
+                        <option value="academic">Academic</option>
+                        <option value="events">Campus Events</option>
+                        <option value="study-group">Study Group</option>
+                        <option value="housing">Housing</option>
+                        <option value="clubs">Clubs & Organizations</option>
+                    </select>
+                </div>
                 <div class="post-actions">
                     <button id="createPostBtn" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Post
+                        <i class="fas fa-paper-plane"></i> Share
                     </button>
                 </div>
             </div>
