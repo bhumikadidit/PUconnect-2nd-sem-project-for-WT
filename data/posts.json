@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": "68470a674f69b6.13967033",
+        "userId": "68470a54c4de96.96278952",
+        "username": "ohmenka",
+        "fullName": "menka",
+        "content": "heya this is first posyt",
+        "createdAt": "2025-06-09 16:23:03",
+        "likes": [
+            "ohmenka"
+        ],
+        "comments": []
+    }
+]

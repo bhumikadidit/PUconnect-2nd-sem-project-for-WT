@@ -1,6 +1,6 @@
 <?php
 // Application configuration
-define('APP_NAME', 'SocialConnect');
+define('APP_NAME', 'UniConnect');
 define('DATA_DIR', __DIR__ . '/../data/');
 define('USERS_FILE', DATA_DIR . 'users.json');
 define('POSTS_FILE', DATA_DIR . 'posts.json');

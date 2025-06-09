@@ -17,7 +17,7 @@ $currentUser = getCurrentUser();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialConnect - Home</title>
+    <title>UniConnect - Campus Social Hub</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -25,11 +25,11 @@ $currentUser = getCurrentUser();
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h2><i class="fas fa-share-alt"></i> SocialConnect</h2>
+                <h2><i class="fas fa-graduation-cap"></i> UniConnect</h2>
             </div>
             <div class="nav-menu">
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Search users..." class="search-input">
+                    <input type="text" id="searchInput" placeholder="Search students & faculty..." class="search-input">
                     <div id="searchResults" class="search-results"></div>
                 </div>
                 <div class="nav-user">
@@ -53,7 +53,7 @@ $currentUser = getCurrentUser();
             <div class="create-post-card">
                 <div class="post-input-container">
                     <img src="https://via.placeholder.com/50" alt="Your avatar" class="post-avatar">
-                    <textarea id="postContent" placeholder="What's on your mind, <?php echo htmlspecialchars($currentUser['username']); ?>?" class="post-input"></textarea>
+                    <textarea id="postContent" placeholder="Share your campus thoughts, <?php echo htmlspecialchars($currentUser['username']); ?>? Study updates, events, or just chat!" class="post-input"></textarea>
                 </div>
                 <div class="post-actions">
                     <button id="createPostBtn" class="btn btn-primary">
@@ -74,7 +74,7 @@ $currentUser = getCurrentUser();
     <!-- Sidebar for suggestions -->
     <aside class="sidebar">
         <div class="suggestions-card">
-            <h3>Who to follow</h3>
+            <h3>Connect with Classmates</h3>
             <div id="userSuggestions" class="user-suggestions">
                 <!-- Dynamic content will be loaded here -->
             </div>

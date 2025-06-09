@@ -682,6 +682,16 @@ function setupFollowButton() {
     // Follow button functionality is handled in event listeners
 }
 
+function setupProfileTabs() {
+    const profileTabs = document.querySelectorAll('.nav-tab');
+    profileTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.dataset.tab;
+            switchProfileTab(tabName);
+        });
+    });
+}
+
 // Utility functions
 function formatTimeAgo(datetime) {
     const now = new Date();
