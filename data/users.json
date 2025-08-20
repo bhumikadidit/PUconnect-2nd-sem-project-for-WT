@@ -9,5 +9,19 @@
         "createdAt": "2025-06-09 16:22:44",
         "followers": [],
         "following": []
+    },
+    {
+        "id": "684d6577e1fcd0.25592215",
+        "fullName": "menka",
+        "username": "menka",
+        "email": "menka@pu.com",
+        "university": "pu",
+        "major": "software",
+        "year": "Freshman",
+        "password": "$2y$10$EHrJA\/BT2GRCBR0KpCFY8udvsoG.nBG21yjkyVc3OU6d\/N2nzu7BS",
+        "bio": "",
+        "createdAt": "2025-06-14 12:05:11",
+        "followers": [],
+        "following": []
     }
 ]

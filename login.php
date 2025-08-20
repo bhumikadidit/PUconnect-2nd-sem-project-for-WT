@@ -15,7 +15,7 @@ if (isLoggedIn()) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniConnect - Student Login</title>
+    <title>PUConnect - Student Login</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -23,8 +23,8 @@ if (isLoggedIn()) {
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
-                <h1><i class="fas fa-graduation-cap"></i> UniConnect</h1>
-                <p>Connect with your campus community</p>
+                <h1><i class="fas fa-graduation-cap"></i> PUConnect</h1>
+                <p>Connect with your PU campus community</p>
             </div>
             
             <form id="loginForm" class="auth-form">
